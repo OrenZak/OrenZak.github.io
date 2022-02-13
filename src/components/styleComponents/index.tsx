@@ -44,33 +44,7 @@ export const SectionContainer = styled.section<{
   scroll-behavior: smooth;
   position: 'relative';
   background: ${(props) => props.theme[props?.background ?? 'background']};
-
-  & h1 {
-    font-size: 2em;
-    margin: 0;
-  }
-
-  & h2 {
-    font-size: 1.5em;
-    margin: 0;
-  }
   font-family: 'Fira Code', monospace;
-
-  & a {
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-  & a:link {
-    color: black;
-  }
-
-  & a:visited {
-    color: black;
-  }
-
-  & a:hover {
-    color: chocolate;
-  }
 `;
 
 export const Footer = styled.div`

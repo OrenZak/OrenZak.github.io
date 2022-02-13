@@ -7,7 +7,7 @@ import './HomeSection.scss';
 const HomeSection = () => (
   <Section id="home">
     <SectionContainer>
-      <img src={'https://avatars.githubusercontent.com/u/8303735?v=4'} className="App-logo" alt="logo" />
+      <img src={'https://avatars.githubusercontent.com/u/8303735?v=4'} className="profile-img" alt="Oren Zakay" />
       <div style={{
         margin: '15px'
       }}>
@@ -19,7 +19,6 @@ const HomeSection = () => (
         </h2>
       </div>
       <a
-        className="App-link"
         href="https://www.linkedin.com/in/orenzakay"
         target="_blank"
         rel="noopener noreferrer"
@@ -28,7 +27,6 @@ const HomeSection = () => (
       </a>
 
       <a
-        className="App-link"
         href="https://www.github.com/OrenZak"
         target="_blank"
         rel="noopener noreferrer"
