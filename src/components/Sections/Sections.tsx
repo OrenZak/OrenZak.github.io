@@ -3,18 +3,13 @@ import { Section } from 'react-scroll-section';
 import { SectionContainer } from '../styleComponents';
 import HomeSection from './Home';
 import AboutSection from './About';
+import SkillsSection from './Skills'
 
 const Sections = () => (
   <Fragment>
     <HomeSection/>
     <AboutSection/>
-    <Section id="skills">
-      <SectionContainer background='secondaryMed'>
-        <span role="img" aria-label="computer">
-          💻
-        </span>
-      </SectionContainer>
-    </Section>
+    <SkillsSection/>
     <Section id="contact" >
       <SectionContainer background='secondaryDark'>
         <span role="img" aria-label="letter">
