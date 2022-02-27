@@ -57,3 +57,24 @@ export const Footer = styled.div`
   width: calc(100% - 20px);
   margin: 10px;
 `;
+
+
+export const AnimatedLine = styled.div<{percentage: number}>`
+  width: 100%;
+  height: 8px;
+  background: #fff;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px 0 rgba(7, 33, 66, 0.15);
+
+  &:after {
+  animation: ratio90 1.5s forwards;
+  background-image: linear-gradient(to right, #072142, #8c2b7a 42%, #ff4d5a);
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 10px;
+  width: ${(props) => `${props.percentage}%`}
+}`

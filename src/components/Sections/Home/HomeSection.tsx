@@ -1,5 +1,6 @@
 import React from 'react'
 import { Section, } from 'react-scroll-section';
+import { svgPath } from '../../../utils/path';
 import { SectionContainer } from '../../styleComponents';
 import './HomeSection.scss';
 
@@ -18,21 +19,39 @@ const HomeSection = () => (
           Software Engineer & Artist
         </h2>
       </div>
-      <a
-        href="https://www.linkedin.com/in/orenzakay"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        LinkedIn
-      </a>
 
-      <a
+      <div>
+        <a
+          href="https://www.linkedin.com/in/orenzakay"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={svgPath('linkedin')} className="icon"></img>
+
+        </a>
+
+        <a
         href="https://www.github.com/OrenZak"
         target="_blank"
         rel="noopener noreferrer"
       >
-        GitHub
-      </a>
+          <img src={svgPath('github')} className="icon"></img>
+
+        </a>
+
+
+
+      </div>
+
+      <a
+        href="https://medium.com/@orenzakay"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+          <img src={svgPath('medium')} style={{width: 100}}></img>
+
+        </a>
+
     </SectionContainer>
   </Section>
 )

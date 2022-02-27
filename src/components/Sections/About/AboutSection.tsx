@@ -4,11 +4,10 @@ import Particles from 'react-tsparticles';
 import { SectionContainer } from '../../styleComponents';
 import particlesOptions from './particlesOptions';
 import './AboutSection.scss';
-//@ts-ignore
-import { isWebpSupported } from 'react-image-webp/dist/utils';
+import { webpPath } from '../../../utils/path';
+
 
 const AboutSection = () => {
-  const imgPath =  window.location.origin + (isWebpSupported() ? '/artvartist21.webp' : '/logo192.png');
   return (
     <Section id="about">
       <SectionContainer background='secondaryLight'>
@@ -25,7 +24,7 @@ const AboutSection = () => {
         </div>
 
         <div className='art-container'>
-          <img src={imgPath} alt='Oren Zakay Art' className='art-img'/>
+          <img src={webpPath('artvartist21')} alt='Oren Zakay Art' className='art-img'/>
         </div>
       </SectionContainer>
     </Section>
