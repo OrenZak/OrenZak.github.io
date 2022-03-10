@@ -1,0 +1,42 @@
+.profile-img {
+    height: 20vmin;
+    width: 20vmin;
+    align-self: center;
+    border-radius: 50%;
+    border: 2px solid white;
+    pointer-events: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h1 {
+    font-size: 4vmin;
+    margin: 0;
+}
+
+h2 {
+    font-size: 3vmin;
+    margin: 0;
+}
+
+a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: chocolate;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+    margin: 5px;
+}

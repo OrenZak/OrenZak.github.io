@@ -1,35 +1,17 @@
+
 import React from 'react';
+import { ScrollingProvider } from 'react-scroll-section';
+import DynamicMenu from './components/Menu';
+import Sections from './components/Sections';
 
-import './App.css';
+const App = (props: any) => {
 
-function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={'https://avatars.githubusercontent.com/u/8303735?v=4'} className="App-logo" alt="logo" />
-        <p>
-          Oren Zakay
-        </p>
-        <a
-          className="App-link"
-          href="https://www.linkedin.com/in/orenzakay"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          LinkedIn
-        </a>
-
-        <a
-          className="App-link"
-          href="https://www.github.com/OrenZak"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub
-        </a>
-      </header>
-    </div>
+    <ScrollingProvider >
+      <DynamicMenu />
+      <Sections/>
+    </ScrollingProvider>
   );
-}
+};
 
 export default App;
