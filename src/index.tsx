@@ -13,13 +13,13 @@ ReactDOM.render(
       <App />
       <Helmet>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-R11LR1Y4C6"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          //@ts-ignore
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+        <script>{`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-          gtag('config', 'G-R11LR1Y4C6');
+        gtag('config', 'G-R11LR1Y4C6');`}
+
         </script>
       </Helmet>
     </React.StrictMode>
