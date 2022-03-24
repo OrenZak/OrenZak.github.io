@@ -5,23 +5,19 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import theme from './theme';
 import { ThemeProvider } from 'styled-components';
-import { Helmet } from "react-helmet";
+import ReactGA from "react-ga4";
+
+ReactGA.initialize("G-R11LR1Y4C6", {
+  gaOptions: {
+    cookieFlags: 'max-age=7200;secure;samesite=none',
+  }
+});
+ReactGA.send("pageview");
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
     <React.StrictMode>
       <App />
-      <Helmet>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-R11LR1Y4C6"></script>
-        <script>{`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-R11LR1Y4C6');`}
-
-        </script>
-      </Helmet>
     </React.StrictMode>
   </ThemeProvider>,
   document.getElementById('root')
