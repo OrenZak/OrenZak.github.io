@@ -5,9 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import theme from './theme';
 import { ThemeProvider } from 'styled-components';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 ReactGA.initialize("G-R11LR1Y4C6");
-ReactGA.pageview(window.location.pathname + window.location.search);
+ReactGA.send({hitType: "pageview", path: `${window.location.pathname + window.location.search}`});
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>

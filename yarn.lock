@@ -7149,10 +7149,10 @@ react-error-overlay@^6.0.10:
   resolved "https://registry.npmjs.org/react-error-overlay/-/react-error-overlay-6.0.10.tgz"
   integrity sha512-mKR90fX7Pm5seCOfz8q9F+66VCc1PGsWSBxKbITjfKVQHMNF2zudxHnMdJiB1fRCb+XsbQV9sO9DCkgsMQgBIA==
 
-react-ga@^3.3.0:
-  version "3.3.0"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/react-ga/-/react-ga-3.3.0.tgz#c91f407198adcb3b49e2bc5c12b3fe460039b3ca"
-  integrity sha1-yR9AcZityztJ4rxcErP+RgA5s8o=
+react-ga4@^1.4.1:
+  version "1.4.1"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/react-ga4/-/react-ga4-1.4.1.tgz#6ee2a2db115ed235b2f2092bc746b4eeeca9e206"
+  integrity sha1-buKi2xFe0jWy8gkrx0a07uyp4gY=
 
 react-image-webp@^0.8.0:
   version "0.8.0"
