@@ -5,6 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import theme from './theme';
 import { ThemeProvider } from 'styled-components';
+import ReactGA from 'react-ga';
+ReactGA.initialize("G-R11LR1Y4C6");
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
