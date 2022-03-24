@@ -5,14 +5,24 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import theme from './theme';
 import { ThemeProvider } from 'styled-components';
-import GA4React from "ga-4-react";
-new GA4React("G-R11LR1Y4C6").initialize();
+import { Helmet } from "react-helmet";
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
     <React.StrictMode>
-        <App />
-      </React.StrictMode>
+      <App />
+      <Helmet>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-R11LR1Y4C6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          //@ts-ignore
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-R11LR1Y4C6');
+        </script>
+      </Helmet>
+    </React.StrictMode>
   </ThemeProvider>,
   document.getElementById('root')
 );
