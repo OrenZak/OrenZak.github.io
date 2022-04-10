@@ -1,3 +1,4 @@
+@import '../../../bits.scss';
 .particles-container {
     position: absolute;
     display: flex;
@@ -11,23 +12,42 @@
     width: 35vw;
     text-align: left;
     margin-left: 10%;
+    @include breakpoint(mobile) {
+        width: 80vw;
+        margin-left: 10%;
+        margin-top: -90%;
+    }
 }
 
 .art-container {
     position: absolute;
     margin-left: 60%;
+    @include breakpoint(mobile) {
+        margin-left: 5.5%;
+        margin-top: 90%;
+    }
 }
 
 .art-img {
     width: 30vw;
     border: 2px solid black;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    @include breakpoint(mobile) {
+        width: 330px;
+        height: 330px;
+    }
 }
 
 h1 {
     font-size: 4vmin;
+    @include breakpoint(mobile) {
+        font-size: 6vmin;
+    }
 }
 
 p {
     font-size: 2.5vmin;
+    @include breakpoint(mobile) {
+        font-size: 3.5vmin;
+    }
 }

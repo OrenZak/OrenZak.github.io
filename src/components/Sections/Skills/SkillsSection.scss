@@ -1,22 +1,45 @@
+@import '../../../bits.scss';
 .content-container {
     display: flex;
     flex-direction: column;
     width: 35vw;
     text-align: left;
     margin-left: 10%;
+    @include breakpoint(mobile) {
+        width: 80vw;
+        margin-left: 10%;
+        margin-top: -90%;
+    }
+}
+
+.check-that {
+    background-color: #072142;
+    width: 10%;
 }
 
 .skills-container {
     position: absolute;
     margin-left: 60%;
+    align-items: center;
+    @include breakpoint(mobile) {
+        margin-left: 0;
+        margin-top: 60%;
+        width: 100%;
+    }
 }
 
 h1 {
     font-size: 4vmin;
+    @include breakpoint(mobile) {
+        font-size: 6vmin;
+    }
 }
 
 p {
     font-size: 2.5vmin;
+    @include breakpoint(mobile) {
+        font-size: 3.5vmin;
+    }
 }
 
 .skill-set__flex {
@@ -37,6 +60,10 @@ p {
 
 .skill-set__list {
     width: 47%;
+    @include breakpoint(mobile) {
+        width: 80%;
+        margin-left: 4.5%;
+    }
 }
 
 ol,
@@ -46,8 +73,10 @@ ul {
 
 .skill-set__item {
     display: flex;
-    justify-content: center;
     margin-top: 30px;
+    @include breakpoint(mobile) {
+        width: 80%;
+    }
 }
 
 .skill-set__icon {
@@ -61,6 +90,9 @@ img {
     height: auto;
     vertical-align: middle;
     width: 100%;
+    @include breakpoint(mobile) {
+        height: 100px
+    }
 }
 
 .skill-set__detail {
@@ -83,6 +115,9 @@ img {
     width: 100%;
     flex-direction: column;
     align-items: center;
+    @include breakpoint(mobile) {
+        margin-top: 20px;
+    }
 }
 
 .small-title {
@@ -90,6 +125,9 @@ img {
     color: #072142;
     letter-spacing: 0.1em;
     font-family: "futura_de";
+    @include breakpoint(mobile) {
+        font-size: 3.2vmin;
+    }
 }
 
 .skill-set__year {
@@ -97,6 +135,12 @@ img {
     color: #e0e0e0;
     letter-spacing: 0.2em;
     position: absolute;
+    @include breakpoint(mobile) {
+        margin-top: 15px;
+        font-size: 3vmin;
+        color: #072142;
+        position: relative;
+    }
 }
 
 .skill-set__high {
@@ -109,22 +153,26 @@ img {
     color: #072142;
 }
 
-.skill-set__bar {
-    width: 100%;
-    height: 8px;
-    background: #fff;
+.skill-cards-outer {
     position: relative;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px 0 rgba(7, 33, 66, 0.15);
+    min-width: 100%;
+    width: 100%;
 }
 
-.skill-set__bar:after {
-    animation: ratio90 1.5s forwards;
-    background-image: linear-gradient(to right, #072142, #8c2b7a 42%, #ff4d5a);
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
+.skill-cards-inner {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+}
+
+.card {
+    flex: 0 0 130px;
+    height: 190px;
+    box-sizing: content-box;
+    margin: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
     border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 10px 0px;
 }

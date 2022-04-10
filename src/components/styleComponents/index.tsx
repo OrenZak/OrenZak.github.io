@@ -59,15 +59,16 @@ export const Footer = styled.div`
 `;
 
 
-export const AnimatedLine = styled.div<{percentage: number}>`
+export const AnimatedLine = styled.div<{ percentage: number }>`
   width: 100%;
   height: 8px;
-  background: #fff;
+  background: #e6e6e6;
   position: relative;
   border-radius: 10px;
   box-shadow: 0 5px 15px 0 rgba(7, 33, 66, 0.15);
 
   &:after {
+  animation-delay: 2s;
   animation: ratio90 1.5s forwards;
   background-image: linear-gradient(to right, #072142, #8c2b7a 42%, #ff4d5a);
   content: "";

@@ -129,12 +129,6 @@ const options: ParticlesProps['params'] = {
                         src: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
                         width: 32,
                         height: 32
-                    }
-                    ,
-                    {
-                        src: "https://cdn-icons.flaticon.com/png/512/2542/premium/2542638.png?token=exp=1644504737~hmac=762fa277ce703967e72a40e0e9c9769e",
-                        width: 32,
-                        height: 32
                     },
                     {
                         src: "https://www.vectorlogo.zone/logos/java/java-vertical.svg",
@@ -163,12 +157,6 @@ const options: ParticlesProps['params'] = {
                         width: 32,
                         height: 32
                     },
-                    {
-                        src: "https://cdn-icons.flaticon.com/png/512/2542/premium/2542638.png?token=exp=1644504737~hmac=762fa277ce703967e72a40e0e9c9769e",
-                        width: 32,
-                        height: 32
-                    }
-                    ,
                     {
                         src: "https://www.vectorlogo.zone/logos/java/java-vertical.svg",
                         width: 32,

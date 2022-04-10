@@ -1,3 +1,4 @@
+@import '../../../bits.scss';
 .profile-img {
     height: 20vmin;
     width: 20vmin;
@@ -6,16 +7,26 @@
     border: 2px solid white;
     pointer-events: none;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    @include breakpoint(mobile) {
+        height: 50vmin;
+        width: 50vmin;
+    }
 }
 
 h1 {
     font-size: 4vmin;
     margin: 0;
+    @include breakpoint(mobile) {
+        font-size: 2em;
+    }
 }
 
 h2 {
     font-size: 3vmin;
     margin: 0;
+    @include breakpoint(mobile) {
+        font-size: 1.3em;
+    }
 }
 
 a {
@@ -36,7 +47,18 @@ a:hover {
 }
 
 .icon {
-    width: 32px;
-    height: 32px;
+    width: 52px;
+    height: 52px;
     margin: 5px;
+    @include breakpoint(mobile) {
+        width: 42px;
+        height: 42px;
+    }
+}
+
+.medium-icon {
+    width: 140px;
+    @include breakpoint(mobile) {
+        width: 120px;
+    }
 }

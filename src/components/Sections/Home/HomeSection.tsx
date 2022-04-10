@@ -31,10 +31,10 @@ const HomeSection = () => (
         </a>
 
         <a
-        href="https://www.github.com/OrenZak"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+          href="https://www.github.com/OrenZak"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img src={svgPath('github')} className="icon"></img>
 
         </a>
@@ -48,9 +48,9 @@ const HomeSection = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-          <img src={svgPath('medium')} style={{width: 100}}></img>
+        <img src={svgPath('medium')} className='medium-icon'></img>
 
-        </a>
+      </a>
 
     </SectionContainer>
   </Section>

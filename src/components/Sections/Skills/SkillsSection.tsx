@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Section, } from 'react-scroll-section';
 import { AnimatedLine, SectionContainer } from '../../styleComponents';
 import { svgPath } from '../../../utils/path';
+import { Breakpoint, useCurrentBreakpointName } from 'react-socks';
 import './SkillsSection.scss';
-
 interface Skill {
   name: string;
   percentage: number;
@@ -24,7 +24,7 @@ const skillsInfo: Skill[] = [
     imageName: 'android'
   },
   {
-    name: 'React Native - TS - JS',
+    name: 'ReactNative',
     percentage: 90,
     years: 2.5,
     imageName: 'rn'
@@ -41,51 +41,104 @@ const skillsInfo: Skill[] = [
     years: 1,
     imageName: 'nodejs'
   },
-]
+];
 
-const SkillsSection = () => {
+const title = `Skills & Experience,`;
+
+const SkillsSection = (props: any) => {
+
   return (
     <Section id="skills">
       <SectionContainer background='secondaryMed'>
-        <div className='content-container'>
-          <h1 className='title'>Skills & Experience,</h1>
-          <p>
-            After getting my Diploma as in Software Engineering, I served as a Java developer and a Team Lead, which led me to start developing to Android.
-            <br /><br />After my army duty I understood mobile is my passion, and pursue that path. I've joined a startup named Blingy, and than moved to Kin Ecosystem leading the Kin Android SDK.
-            <br /><br />I decided to join Wix.com to explore the multiplatform React Native in the CTO team, helping to create new teams, research & POC for strategic projects.
-          </p>
-        </div>
-
-        <div className='skills-container'>
+        <Content title={title} />
+        <div className="skills-container">
           <div className="skill-set container">
             <div className="content content--mlarge skill-set__flex">
-              <ul className="skill-set__list">
-                {
-                  skillsInfo.map(skill =>
-                  (
-                    <li className="skill-set__item">
-                      <div className="skill-set__icon">
-                        <img src={svgPath(skill.imageName)} alt={skill.name} />
-                      </div>
-                      <div className="skill-set__detail">
-                        <div className="skill-set__meta">
-                          <h1 className="small-title">{skill.name}</h1>
-                        </div>
-                        <div className="skill-set__meta2">
-                          <AnimatedLine percentage={skill.percentage}/>
-                          <p className="skill-set__year">{skill.years} YEARS</p>
-                        </div>
-                      </div>
-                    </li>
-                  ))
-                }
-              </ul>
+              <SkillSet skills={skillsInfo} />
             </div>
           </div>
         </div>
       </SectionContainer>
     </Section>
   );
+}
+
+const TextContent = () => (
+  <p>
+    After getting my Diploma as in Software Engineering, I served as a Java developer and a Team Lead, which led me to start developing to Android.
+    <br /><br />After my army duty I understood mobile is my passion, and pursue that path. I've joined a startup named Blingy, and than moved to Kin Ecosystem leading the Kin Android SDK.
+    <br /><br />I decided to join Wix.com to explore the multiplatform React Native in the CTO team, helping to create new teams, research & POC for strategic projects.
+  </p>
+)
+
+const Content = ({ title }: { title: string }) => {
+  return (
+    <React.Fragment>
+      <Breakpoint small down>
+        <div className='content-container'>
+          <h1 className='title'>{title}</h1>
+          <TextContent />
+        </div>
+      </Breakpoint>
+
+      <Breakpoint medium up>
+        <div className='content-container'>
+          <h1 className='title'>{title}</h1>
+          <TextContent />
+        </div>
+      </Breakpoint>
+    </React.Fragment>
+  )
+}
+
+const SkillSet = ({ skills }: { skills: Skill[] }) => {
+  return (
+    <React.Fragment>
+      <Breakpoint small down>
+        <div className='skill-cards-outer'>
+          <div className='skill-cards-inner'>
+            {skills.map((skill, index) => (<SkillCard skill={skill} key={index}/>))}
+          </div>
+        </div>
+
+      </Breakpoint>
+      <Breakpoint medium up>
+        <ul className="skill-set__list">
+          {skills.map((skill, index) => {
+            return (
+              <li className="skill-set__item" key={index}>
+                <div className="skill-set__icon">
+                  <img src={svgPath(skill.imageName)} alt={skill.name} />
+                </div>
+                <div className="skill-set__detail">
+                  <div className="skill-set__meta">
+                    <h1 className="small-title">{skill.name}</h1>
+                  </div>
+                  <div className="skill-set__meta2">
+                    <AnimatedLine percentage={skill.percentage} />
+                    <p className="skill-set__year">{skill.years} YEARS</p>
+                  </div>
+                </div>
+              </li>
+            )
+          })}
+        </ul>
+      </Breakpoint>
+    </React.Fragment >
+  )
+}
+
+const SkillCard = ({ skill, key }: { skill: Skill, key: number }) => {
+  return (
+    <div key={key} className='card'>
+      {skill.name}
+      <img src={svgPath(skill.imageName)} alt={skill.name} style={{marginTop: 10}} />
+      <div className="skill-set__meta2">
+        <AnimatedLine percentage={skill.percentage}/>
+        <p className="skill-set__year">{skill.years} YEARS</p>
+      </div>
+    </div>
+  )
 }
 
 export default SkillsSection;

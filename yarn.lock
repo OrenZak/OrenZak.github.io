@@ -7329,6 +7329,11 @@ react-side-effect@^2.1.0:
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/react-side-effect/-/react-side-effect-2.1.1.tgz#66c5701c3e7560ab4822a4ee2742dee215d72eb3"
   integrity sha1-ZsVwHD51YKtIIqTuJ0Le4hXXLrM=
 
+react-socks@^2.2.0:
+  version "2.2.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/react-socks/-/react-socks-2.2.0.tgz#8b3884a5a735f21119ad44244f7e754afe9d98fe"
+  integrity sha1-iziEpac18hEZrUQkT351Sv6dmP4=
+
 react-tsparticles@^1.41.0:
   version "1.42.4"
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/react-tsparticles/-/react-tsparticles-1.42.4.tgz#da35107241aaa7ed1936563bdeacafd63bb42539"
