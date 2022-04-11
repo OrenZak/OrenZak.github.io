@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Section, } from 'react-scroll-section';
 import { AnimatedLine, SectionContainer } from '../../styleComponents';
 import { svgPath } from '../../../utils/path';
-import { Breakpoint, useCurrentBreakpointName, useCurrentWidth } from 'react-socks';
+import { Breakpoint, useCurrentWidth } from 'react-socks';
 import './SkillsSection.scss';
 interface Skill {
   name: string;
@@ -50,14 +50,22 @@ const SkillsSection = (props: any) => {
   return (
     <Section id="skills">
       <SectionContainer background='secondaryMed'>
-        <Content title={title} />
-        <div className="skills-container">
-          <div className="skill-set container">
-            <div className="content content--mlarge skill-set__flex">
-              <SkillSet skills={skillsInfo} />
+        <Breakpoint small down>
+          <div className='skills-mobile-container'>
+            <Content title={title} />
+            <SkillSet skills={skillsInfo} />
+          </div>
+        </Breakpoint>
+        <Breakpoint medium up>
+          <Content title={title} />
+          <div className="skills-container">
+            <div className="skill-set container">
+              <div className="content content--mlarge skill-set__flex">
+                <SkillSet skills={skillsInfo} />
+              </div>
             </div>
           </div>
-        </div>
+        </Breakpoint>
       </SectionContainer>
     </Section>
   );
@@ -98,10 +106,10 @@ const SkillSet = ({ skills }: { skills: Skill[] }) => {
       <Breakpoint small down>
         <div className='skill-cards-wrapper'>
           <div className='skill-cards-outer' style={{
-            maxWidth: (width - 2)
+            maxWidth: (width - 10)
           }}>
             <div className='skill-cards-inner'>
-              {skills.map((skill, index) => (<SkillCard skill={skill} key={index}/>))}
+              {skills.map((skill, index) => (<SkillCard skill={skill} key={index} />))}
             </div>
           </div>
         </div>
@@ -137,9 +145,9 @@ const SkillCard = ({ skill, key }: { skill: Skill, key: number }) => {
   return (
     <div key={key} className='card'>
       {skill.name}
-      <img src={svgPath(skill.imageName)} alt={skill.name} style={{marginTop: 10, height: '80px'}} />
+      <img src={svgPath(skill.imageName)} alt={skill.name} style={{ marginTop: 10, height: '80px' }} />
       <div className="skill-set__meta2">
-        <AnimatedLine percentage={skill.percentage}/>
+        <AnimatedLine percentage={skill.percentage} />
         <p className="skill-set__year">{skill.years} YEARS</p>
       </div>
     </div>

@@ -1,4 +1,12 @@
 @import '../../../bits.scss';
+.skills-mobile-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
 .content-container {
     display: flex;
     flex-direction: column;
@@ -7,8 +15,8 @@
     margin-left: 10%;
     @include breakpoint(mobile) {
         width: 80vw;
-        margin-left: 10%;
-        margin-top: -60%;
+        margin-left: 0;
+        margin-top: 0;
     }
 }
 
@@ -23,7 +31,7 @@
     align-items: center;
     @include breakpoint(mobile) {
         margin-left: 0;
-        margin-top: 60%;
+        margin-top: 0;
         width: 100%;
     }
 }
@@ -156,6 +164,7 @@ img {
 .skill-cards-wrapper {
     display: block;
     box-sizing: border-box;
+    margin-top: 20px;
 }
 
 .skill-cards-outer {
