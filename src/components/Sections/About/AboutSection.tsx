@@ -38,17 +38,19 @@ const Content = () => {
         </div>
       </Breakpoint>
       <Breakpoint medium up>
-        <div className='content-container'>
-          <h1 className='title'>Little About Myself,</h1>
-          <p>
-            I'm a Mobile Developer, located in Israel. I have passion for high end UI elements and animations, but it doesn't end there the architectural spirit is in my blood.
-            <br /><br />Self-learner, hard working person, problem solver, motivated and looking for challenges. I love to paint and listen to Jazz music. I'm a family person and Father to Liam and Amy.
-            <br /><br />Interested in the entire spectrum of Mobile development, working on ambitious projects with great people.
-          </p>
-        </div>
+        <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
+          <div className='content-container'>
+            <h1 className='title'>Little About Myself,</h1>
+            <p>
+              I'm a Mobile Developer, located in Israel. I have passion for high end UI elements and animations, but it doesn't end there the architectural spirit is in my blood.
+              <br /><br />Self-learner, hard working person, problem solver, motivated and looking for challenges. I love to paint and listen to Jazz music. I'm a family person and Father to Liam and Amy.
+              <br /><br />Interested in the entire spectrum of Mobile development, working on ambitious projects with great people.
+            </p>
+          </div>
 
-        <div className='art-container'>
-          <img src={webpPath('artvartist21', true)} alt='Oren Zakay Art' className='art-img' />
+          <div className='art-container'>
+            <img src={webpPath('artvartist21', true)} alt='Oren Zakay Art' className='art-img' />
+          </div>
         </div>
       </Breakpoint>
     </React.Fragment>

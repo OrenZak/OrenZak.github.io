@@ -7,12 +7,12 @@
     align-items: center;
 }
 
-.content-container {
+.skills-content-container {
     display: flex;
     flex-direction: column;
     width: 35vw;
     text-align: left;
-    margin-left: 10%;
+    margin-left: 30%;
     @include breakpoint(mobile) {
         width: 80vw;
         margin-left: 0;
@@ -20,15 +20,9 @@
     }
 }
 
-.check-that {
-    background-color: #072142;
-    width: 10%;
-}
-
 .skills-container {
     position: absolute;
     margin-left: 60%;
-    align-items: center;
     @include breakpoint(mobile) {
         margin-left: 0;
         margin-top: 0;

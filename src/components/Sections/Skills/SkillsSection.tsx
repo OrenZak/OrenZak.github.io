@@ -57,11 +57,13 @@ const SkillsSection = (props: any) => {
           </div>
         </Breakpoint>
         <Breakpoint medium up>
-          <Content title={title} />
-          <div className="skills-container">
-            <div className="skill-set container">
-              <div className="content content--mlarge skill-set__flex">
-                <SkillSet skills={skillsInfo} />
+          <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+            <Content title={title} />
+            <div className="skills-container">
+              <div className="skill-set container">
+                <div className="content content--mlarge skill-set__flex">
+                  <SkillSet skills={skillsInfo} />
+                </div>
               </div>
             </div>
           </div>
@@ -83,15 +85,15 @@ const Content = ({ title }: { title: string }) => {
   return (
     <React.Fragment>
       <Breakpoint small down>
-        <div className='content-container'>
-          <h1 className='title'>{title}</h1>
+        <div className='skills-content-container'>
+          <h1>{title}</h1>
           <TextContent />
         </div>
       </Breakpoint>
 
       <Breakpoint medium up>
-        <div className='content-container'>
-          <h1 className='title'>{title}</h1>
+        <div className='skills-content-container'>
+          <h1>{title}</h1>
           <TextContent />
         </div>
       </Breakpoint>
