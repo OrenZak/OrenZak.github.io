@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { Section, } from 'react-scroll-section';
 import { AnimatedLine, SectionContainer } from '../../styleComponents';
 import { svgPath } from '../../../utils/path';
-import { Breakpoint, useCurrentBreakpointName } from 'react-socks';
+import { Breakpoint, useCurrentBreakpointName, useCurrentWidth } from 'react-socks';
 import './SkillsSection.scss';
 interface Skill {
   name: string;
@@ -92,12 +92,17 @@ const Content = ({ title }: { title: string }) => {
 }
 
 const SkillSet = ({ skills }: { skills: Skill[] }) => {
+  const width = useCurrentWidth()
   return (
     <React.Fragment>
       <Breakpoint small down>
-        <div className='skill-cards-outer'>
-          <div className='skill-cards-inner'>
-            {skills.map((skill, index) => (<SkillCard skill={skill} key={index}/>))}
+        <div className='skill-cards-wrapper'>
+          <div className='skill-cards-outer' style={{
+            maxWidth: width
+          }}>
+            <div className='skill-cards-inner'>
+              {skills.map((skill, index) => (<SkillCard skill={skill} key={index}/>))}
+            </div>
           </div>
         </div>
 
@@ -132,7 +137,7 @@ const SkillCard = ({ skill, key }: { skill: Skill, key: number }) => {
   return (
     <div key={key} className='card'>
       {skill.name}
-      <img src={svgPath(skill.imageName)} alt={skill.name} style={{marginTop: 10}} />
+      <img src={svgPath(skill.imageName)} alt={skill.name} style={{marginTop: 10, height: '80px'}} />
       <div className="skill-set__meta2">
         <AnimatedLine percentage={skill.percentage}/>
         <p className="skill-set__year">{skill.years} YEARS</p>
