@@ -1,8 +1,8 @@
 //@ts-ignore
 import { isWebpSupported } from 'react-image-webp/dist/utils';
 
-export const webpPath = (imageName: string, hasPng: false): string =>  {
-  let imagePath = '/webp-not-sup.png';
+export const webpPath = (imageName: string, hasPng: boolean = false): string =>  {
+  let imagePath = '/webp-not-sup.png' ;
   if (isWebpSupported()) {
     imagePath = `/${imageName}.webp`;
   } else {

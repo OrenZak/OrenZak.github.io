@@ -24,7 +24,7 @@ const AboutSection = () => {
         </div>
 
         <div className='art-container'>
-          <img src={webpPath('artvartist21')} alt='Oren Zakay Art' className='art-img'/>
+          <img src={webpPath('artvartist21', true)} alt='Oren Zakay Art' className='art-img'/>
         </div>
       </SectionContainer>
     </Section>
