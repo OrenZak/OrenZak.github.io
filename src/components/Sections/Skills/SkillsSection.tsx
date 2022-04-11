@@ -98,7 +98,7 @@ const SkillSet = ({ skills }: { skills: Skill[] }) => {
       <Breakpoint small down>
         <div className='skill-cards-wrapper'>
           <div className='skill-cards-outer' style={{
-            maxWidth: width
+            maxWidth: (width - 2)
           }}>
             <div className='skill-cards-inner'>
               {skills.map((skill, index) => (<SkillCard skill={skill} key={index}/>))}
